@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Management System - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      .logo-container {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+      }
+      .logo {
+        height: 50px; /* Adjust as needed */
+        width: auto;
+      }
+    </style>
+  </head>
+  <body class="index-body">
+    <div class="container1">
+      <main>
+        <section class="hero">
+          <h2>Welcome to the Hospital Management System</h2>
+          <p>
+            Manage patients, doctors, and appointments efficiently with our
+            easy-to-use system.
+          </p>
+         <div class="main-btn">
+          <a href="{{ url_for('add_patient') }}" class="btn btn1"><i class="fas fa-user-plus"></i> Add New Patient</a>
+          <a href="{{ url_for('add_doctor') }}" class="btn btn1"><i class="fas fa-user-md"></i> Add Doctor</a>
+          <a href="{{ url_for('schedule_appointment') }}" class="btn btn1"><i class="fas fa-calendar-plus"></i> Schedule Appointment</a>
+          <a href="{{ url_for('view_appointments') }}" class="btn btn1"><i class="fas fa-calendar-alt"></i> View Appointments</a>
+          <a href="{{ url_for('view_doctors') }}" class="btn btn1"><i class="fas fa-users"></i> View Doctors</a>
+          <a href="{{ url_for('view_patients') }}" class="btn btn1"><i class="fas fa-procedures"></i> View Patients</a>
+         </div>
+        </section>
+      </main>
+      <footer>
+        <a href="{{ url_for('logout') }}" class="btn but-main"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </footer>
+    </div>
+  </body>
+</html>
